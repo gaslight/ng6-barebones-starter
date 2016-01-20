@@ -1,1 +1,3 @@
-console.log("Nothing here yet");
+import angular from "angular";
+
+let module = angular.module("hirem", []);
