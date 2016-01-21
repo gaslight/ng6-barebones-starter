@@ -1,7 +1,10 @@
 class ListController {
-  constructor() {
-    this.candidates = [{name: "Jane", id: 1}, {name: "John", id: 2}];
+  constructor($http) {
+    $http.get("http://localhost:8000/candidates").then( (candidates) => {
+      this.candidates = candidates;
+    });
   }
 }
 
+ListController.$inject = ["$http"]
 export default ListController
