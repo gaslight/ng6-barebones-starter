@@ -1,8 +1,8 @@
 <div class="col-md-3">
   <ul class="nav nav-sidebar">
-    <li ng-repeat="candidate in vm.candidates"><a href="">{{candidate.name}}</a></li>
+    <li ng-repeat="candidate in vm.candidates"><a href="#/candidates/{{candidate.id}}">{{candidate.name}}</a></li>
   </ul>
 </div>
 <div class="col-md-9">
-  This is where the candidates details should go.
+  <div ui-view></div>
 </div>
