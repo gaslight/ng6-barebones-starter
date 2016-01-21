@@ -1,7 +1,6 @@
 <div class="col-md-3">
   <ul class="nav nav-sidebar">
-    <li><a href="">Joe</a></li>
-    <li><a href="">Not Joe</a></li>
+    <li ng-repeat="candidate in vm.candidates"><a href="">{{candidate.name}}</a></li>
   </ul>
 </div>
 <div class="col-md-9">
