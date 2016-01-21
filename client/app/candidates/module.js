@@ -1,7 +1,7 @@
 import angular from "angular";
 import uiRouter from "angular-ui-router";
 import listTemplate from "./list.html";
-import ListController from "./listController";
+import ListController from "./ListController";
 
 let candidatesModule = angular.module("candidates", [uiRouter]);
 
