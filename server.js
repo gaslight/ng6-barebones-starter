@@ -13,7 +13,7 @@
  */
 
 var express = require('express');
-
+var cors = require("cors");
 var _ = require("underscore");
 
 var candidates = [
@@ -35,6 +35,7 @@ var app = express();
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.post('/login', function(req, res) {
   res.json({ message: 'logging in!' });
