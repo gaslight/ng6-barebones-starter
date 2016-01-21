@@ -4,7 +4,8 @@ import homeTemplate from "./home.html";
 
 let module = angular.module("hirem", [uiRouter]);
 
-module.config( ($stateProvider) => {
+module.config( ($stateProvider, $urlRouterProvider) => {
+  $urlRouterProvider.otherwise('/');
   $stateProvider.state("home", {
     url: "/",
     template: homeTemplate
