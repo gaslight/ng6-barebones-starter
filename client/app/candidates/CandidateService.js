@@ -8,6 +8,13 @@ class CandidateService {
       return response.data;
     });
   }
+  
+  getCandidate(id) {
+    return this.http.get(`http://localhost:8000/candidates/${id}`).then((response) => {
+      return response.data;
+    });
+  }
+
 }
 
 CandidateService.$inject = ["$http"];

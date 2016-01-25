@@ -1,8 +1,10 @@
 class ShowController {
-  constructor($stateParams) {
-    this.candidate = {name: "Fred", id: $stateParams.id};
+  constructor($stateParams, CandidateService) {
+    CandidateService.getCandidate($stateParams.id).then( (candidate) => {
+      this.candidate = candidate;
+    });
   }
 }
 
-ShowController.$inject = ["$stateParams"]
+ShowController.$inject = ["$stateParams", "CandidateService"]
 export default ShowController
