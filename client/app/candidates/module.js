@@ -5,6 +5,9 @@ import ListController from "./ListController";
 import CandidateService from "./CandidateService";
 import showTemplate from "./show.html";
 import ShowController from "./ShowController";
+import formTemplate from "./form.html";
+import NewController from "./NewController";
+import EditController from "./EditController";
 
 let candidatesModule = angular.module("candidates", [uiRouter]);
 
@@ -17,10 +20,22 @@ candidatesModule.config(($stateProvider) => {
     controller: ListController,
     controllerAs: "vm"
   });
+  $stateProvider.state("candidates.new", {
+    url: "/new",
+    template: formTemplate,
+    controller: NewController,
+    controllerAs: "vm"
+  });
   $stateProvider.state("candidates.show", {
     url: "/:id",
     template: showTemplate,
     controller: ShowController,
+    controllerAs: "vm"
+  });
+  $stateProvider.state("candidates.edit", {
+    url: "/:id/edit",
+    template: formTemplate,
+    controller: EditController,
     controllerAs: "vm"
   });
 

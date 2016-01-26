@@ -2,6 +2,7 @@
   <ul class="nav nav-sidebar">
     <li ng-repeat="candidate in vm.candidates"><a href="#/candidates/{{candidate.id}}">{{candidate.name}}</a></li>
   </ul>
+  <a ui-sref="candidates.new">New Candidate</a>
 </div>
 <div class="col-md-9">
   <div ui-view></div>
