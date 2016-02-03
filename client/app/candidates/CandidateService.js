@@ -5,8 +5,7 @@ class CandidateService {
 
   getCandidates() {
     return this.http.get("http://localhost:8000/candidates").then((response) => {
-      this.candidates = response.data;
-      return this.candidates;
+      return response.data;
     });
   }
 
@@ -18,7 +17,6 @@ class CandidateService {
 
   create(candidate) {
     return this.http.post("http://localhost:8000/candidates", candidate).then( (response) => {
-      this.candidates.push(response.data);
       return response.data;
     });
   }
