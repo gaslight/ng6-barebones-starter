@@ -21,7 +21,7 @@ describe('CandidateService', () => {
   it("should find candidate by id", function() {
     let retrievedCandidate = {};
     httpBackend.expectGET('http://localhost:8000/candidates/1').respond({name: "Bob", id: 1});
-    candidateService.get(1).then( (candidate) => {
+    candidateService.getCandidate(1).then( (candidate) => {
       retrievedCandidate = candidate;
       expect(retrievedCandidate.id).to.equal(1);
     });
