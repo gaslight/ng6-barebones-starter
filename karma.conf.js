@@ -13,15 +13,6 @@ module.exports = function (config) {
     // files to exclude
     exclude: [],
 
-    plugins: [
-      require("karma-chai"),
-      require("karma-chrome-launcher"),
-      require("karma-mocha"),
-      require("karma-mocha-reporter"),
-      require("karma-sourcemap-loader"),
-      require("karma-webpack")
-    ],
-
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: { 'spec.bundle.js': ['webpack', 'sourcemap'] },
@@ -56,13 +47,13 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
 
     // toggle whether to watch files and rerun tests upon incurring changes
-    autoWatch: false,
+    autoWatch: true,
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
     // if true, Karma runs tests once and exits
-    singleRun: true
+    singleRun: false
   });
 };
