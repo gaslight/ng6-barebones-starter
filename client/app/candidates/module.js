@@ -10,6 +10,7 @@ import NewController from "./NewController";
 import EditController from "./EditController";
 import displayMarkdown from "./DisplayMarkdown";
 import editMarkdown from "./EditMarkdown";
+import starRating from "./StarRating";
 
 let candidatesModule = angular.module("candidates", [uiRouter]);
 
@@ -45,5 +46,6 @@ candidatesModule.config(($stateProvider) => {
 
 candidatesModule.directive("displayMarkdown", displayMarkdown);
 candidatesModule.directive("editMarkdown", editMarkdown);
+candidatesModule.directive("starRating", starRating);
 
 export default candidatesModule;
