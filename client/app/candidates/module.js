@@ -9,6 +9,7 @@ import formTemplate from "./form.html";
 import NewController from "./NewController";
 import EditController from "./EditController";
 import displayMarkdown from "./DisplayMarkdown";
+import editMarkdown from "./EditMarkdown";
 
 let candidatesModule = angular.module("candidates", [uiRouter]);
 
@@ -43,5 +44,6 @@ candidatesModule.config(($stateProvider) => {
 });
 
 candidatesModule.directive("displayMarkdown", displayMarkdown);
+candidatesModule.directive("editMarkdown", editMarkdown);
 
 export default candidatesModule;
