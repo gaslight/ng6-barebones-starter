@@ -3,5 +3,7 @@
   <dd>{{vm.candidate.id}}</dd>
   <dt>Name:</dt>
   <dd>{{vm.candidate.name}}</dd>
+  <dt>Resume:</dt>
+  <dd display-markdown="vm.candidate.resume"></dd>
 </dl>
 <a ui-sref="candidates.edit({id: vm.candidate.id})">Edit</a>
