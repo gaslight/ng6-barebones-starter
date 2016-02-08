@@ -1,7 +1,11 @@
 import { markdown } from "markdown";
 
-export default function($sce) {
+let markdownFilter = function($sce) {
   return function(text) {
     return $sce.trustAsHtml(markdown.toHTML(text || ""));
   }
 }
+
+markdownFilter.$inject = ["$sce"];
+
+export default markdownFilter;
