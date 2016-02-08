@@ -3,6 +3,10 @@
     <label for="name">Name</label>
     <input type="text" class="form-control" id="name" placeholder="Enter Name" ng-model="vm.candidate.name">
   </div>
-
+  <div class="form-group">
+    <label for="name">Resume</label>
+    <textarea class="form-control" id="name" ng-model="vm.candidate.resume"></textarea>
+    <div ng-bind-html="vm.candidate.resume | markdown"></div>
+  </div>
   <button type="submit" class="btn btn-default" ng-click="vm.save()">Save</button>
 </form>
