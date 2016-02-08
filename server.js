@@ -17,8 +17,8 @@ var cors = require("cors");
 var _ = require("underscore");
 
 var candidates = [
-  {id: 1, name: "John Doe", email: "john.doe@example.com", rating: 40},
-  {id: 2, name: "Jane Doe", email: "jane.doe@example.com", rating: 60},
+  {id: 1, name: "John Doe", email: "john.doe@example.com", rating: 2},
+  {id: 2, name: "Jane Doe", email: "jane.doe@example.com", rating: 3},
 ];
 
 function findCandidate(id) {
