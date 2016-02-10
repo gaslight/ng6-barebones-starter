@@ -4,7 +4,13 @@ let starRating = () => {
       starRating: "="
     },
     link: (scope, element, attrs) => {
-      $(element).raty({path: "/images"});
+      $(element).raty({
+        path: "/images",
+        click: (score, e) => {
+          scope.starRating = score;
+          scope.$apply();
+        }
+      });
       scope.$watch("starRating", (rating) => {
         $(element).raty("score", rating);
       });
