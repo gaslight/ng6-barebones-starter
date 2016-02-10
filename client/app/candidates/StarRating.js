@@ -3,18 +3,17 @@ let starRating = () => {
     scope: {
       starRating: "="
     },
-    link: (scope, element, attrs) => {
+    require: "ngModel",
+    link: (scope, element, attrs, ngModelController) => {
       $(element).raty({
         path: "/images",
-        click: (score, e) => {
-          scope.starRating = score;
-          scope.$apply();
+        click: (score, event) => {
+          ngModelController.$setViewValue(score);
         }
       });
-      scope.$watch("starRating", (rating) => {
-        $(element).raty("score", rating);
-      });
-
+      ngModelController.$render = () => {
+        $(element).raty("score", ngModelController.$viewValue);
+      };
     }
   };
 };
