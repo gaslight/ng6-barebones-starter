@@ -11,7 +11,7 @@ import EditController from "./EditController";
 import displayMarkdown from "./DisplayMarkdown";
 import editMarkdown from "./EditMarkdown";
 import starRating from "./StarRating";
-import dollarInput from "./DollarInput";
+import dollarInputTemplate from "./dollarInput.html";
 
 let candidatesModule = angular.module("candidates", [uiRouter]);
 
@@ -48,6 +48,9 @@ candidatesModule.config(($stateProvider) => {
 candidatesModule.directive("displayMarkdown", displayMarkdown);
 candidatesModule.directive("editMarkdown", editMarkdown);
 candidatesModule.directive("starRating", starRating);
-candidatesModule.directive("dollarInput", dollarInput);
+candidatesModule.component("dollarInput", {
+  template: dollarInputTemplate,
+  transclude: true
+});
 
 export default candidatesModule;
